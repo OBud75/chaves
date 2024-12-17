@@ -8,9 +8,6 @@ User::User(int id, std::unique_ptr<Password> password_)
     : id(id), password(std::move(password_)), is_logged_in(false) {}
 
 void User::save() {
-    // In a file (or DB)
-    // id | password (hashed)
-
     // Sauvegarde dans un fichier "users.db" (simple simulation d'une base de données)
     std::ofstream db_file("users.db", std::ios::app);
     if (!db_file.is_open()) {
@@ -24,10 +21,6 @@ void User::save() {
 };
 
 int User::login(const char *raw_password) {
-    // Compare raw_password with password in DB
-    // for user with id this.id
-    // is_logged_in = true; // If passwords match
-
     Password input_password(raw_password);
     if (*password == input_password) {
         is_logged_in = true;

@@ -4,16 +4,6 @@
 #include <sstream>
 
 int main() {
-    // Create a Person with password
-    // test password encryption
-        // assert person.password == "toto"
-    // person.save()
-    // auto p = Person.get(id);
-    // p.login(password);
-
-    // Crée un mot de passe avec chiffrement César
-    // Password password("toto");
-
     // Demande à l'utilisateur de saisir un mot de passe
     std::string raw_password;
     std::cout << "Saisir un mot de passe : ";
