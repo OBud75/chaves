@@ -55,6 +55,17 @@ User& User::get(int id) {
                 auto user = new User(id, std::make_unique<Password>(password));
                 
                 return *user;
+                // Pour éviter d'avoir à gérer la mémoire, on préfère souvent renvoyer un smart pointer.
+                // En fonction des cas, on peut penser à un vecteur/map contenant des User ou des unique_ptr<User>
+                // Cela permet d'avoir un conteneur qui gère la mémoire automatiquement
+                // puis de renvoyer une référence ou un pointeur vers l'élément souhaité
+                // et ainsi de ne pas avoir à se soucier de la libération de la mémoire
+                
+                // std::vector<std::unique_ptr<User>> users;
+                // users.push_back(std::make_unique<User>(id, std::move(password)));
+                // return users.back();
+
+                // Regardez également du côté de std::move pour utiliser les mêmes blocs mémoire des 2 cotés du return
             }
         }
     }

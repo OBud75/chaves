@@ -116,6 +116,10 @@ int main() {
     for (int i = 0; i < sizeof(people) / (sizeof(people[0])); i++) {
         printf("Person %d age: %d\n", i, people[i]->age);
     };
+
+    // On peut éventuellement itérer sur les personnes du tableau:
+    // for (Person *p = people; p < people + sizeof(people) / (sizeof(people[0])); p++) {
+    //     printf("Person age: %d\n", p->age);}
  
 }
 

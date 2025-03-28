@@ -72,6 +72,9 @@ int is_greater(
         return compare_fnc(obj1, obj2);
     };
 
+// Une manière de comparer directement serait de renvoyer
+// -1 si obj1 < obj2, 1 si obj1 > obj2 et 0 si obj1 == obj2
+
 void swap(void *obj1, void *obj2, size_t size) {
     //allouer de la mémoire pour un objet temporaire
     void *temp = malloc(size);
