@@ -35,6 +35,8 @@ void eq_function_books() {
     };
 }
 
+// Une fonction de comparaison qui passe partout serait de return -1 si obj1 < obj2, 1 si obj1 > obj2 et 0 si égaux
+
 void linear_search() {
     // Recherche de personne dans un tableau
     Person person1 = {30};
